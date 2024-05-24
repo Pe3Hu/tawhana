@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b41g7oyxi6ur"]
+
+[ext_resource type="Texture2D" uid="uid://dgqi3sbpiahkn" path="res://asset/png/block/nexus.png" id="1_7gawf"]
+[ext_resource type="Script" path="res://scene/4/nexus.gd" id="1_ylhe4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rlgfw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42ymi"]
+radius = 4.0
+
+[node name="Nexus" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_rlgfw")
+script = ExtResource("1_ylhe4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_42ymi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_7gawf")
